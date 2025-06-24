@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./progGrafico.js" defer></script>
+    <title>Gráfico de Faturamento Semanal</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Gráfico de Faturamento Semanal</h1>
+        
+        <div class="input-section">
+            <h2>Adicionar faturamento diário</h2>
+            
+            <div class="selection-group">
+                <label for="diaSemana">Selecione o dia:</label>
+                <select id="diaSemana">
+                    <option value="">-- Selecione --</option>
+                    <option value="segunda">Segunda-feira</option>
+                    <option value="terca">Terça-feira</option>
+                    <option value="quarta">Quarta-feira</option>
+                    <option value="quinta">Quinta-feira</option>
+                    <option value="sexta">Sexta-feira</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="valor">Valor (R$):</label>
+                <input type="number" id="valor" placeholder="Digite o valor" step="0.01" min="0">
+            </div>
+            
+            <div class="button-group">
+                <button id="adicionarBtn">ADICIONAR VALOR</button>
+                <button id="gerarBtn">GERAR GRÁFICO</button>
+                <button id="limparBtn">LIMPAR TUDO</button>
+            </div>
+            
+            <div class="valores-salvos">
+                <h3>Valores cadastrados:</h3>
+                <ul id="listaValores"></ul>
+            </div>
+        </div>
+        
+        <div class="area-graf">
+            <canvas id="graf"></canvas>
+        </div>
+    </div>
+</body>
+</html>
